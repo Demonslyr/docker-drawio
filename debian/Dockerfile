@@ -15,7 +15,7 @@ RUN cd /tmp && \
 
 FROM tomcat:9-jre11-slim
 
-LABEL maintainer="JGraph Ltd"
+LABEL maintainer="Atriarch-systems"
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
