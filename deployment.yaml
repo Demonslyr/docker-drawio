@@ -82,6 +82,6 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: draw.io
+          serviceName: drawio
           servicePort: http
 ---
