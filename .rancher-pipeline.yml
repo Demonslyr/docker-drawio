@@ -12,4 +12,7 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 20
+branch:
+  include:
+  - atriarch-k8s-config
 notification: {}
