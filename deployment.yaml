@@ -45,8 +45,16 @@ spec:
             cpu: 100m
             memory: 128Mi
         name: drawio
+        volumeMounts:
+        - name: github_client_credentials
+          mountPath: "/usr/local/tomcat/webapps/draw/WEB-INF"
+          readOnly: true
         ports:
         - containerPort: 8080
+      volumes:
+      - name: github_client_credentials
+        secret:
+          secretName: draw-atriarch-git-clientcreds
       imagePullSecrets:
       - name: atriarch-systems-docker-group
 ---
