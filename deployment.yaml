@@ -47,7 +47,7 @@ spec:
         name: drawio
         volumeMounts:
         - name: github-client-credentials
-          mountPath: /usr/local/tomcat/webapps/draw/WEB-INF/git-creds
+          mountPath: /usr/local/tomcat/webapps/draw/Git_Config
         ports:
         - containerPort: 8080
       volumes:
