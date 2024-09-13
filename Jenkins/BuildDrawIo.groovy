@@ -19,7 +19,7 @@ node {
         // def results = sh returnStdout: true, script: "dotnet test "
     }
     stage('build'){
-           def buildout = sh(returnStdout: true, script: "docker build -t ${appName} -f ${dockerfilePathFromRoot} ..")
+           def buildout = sh(returnStdout: true, script: "docker build -t ${appName} -f ${dockerfilePathFromRoot} .")
            println buildout
     }
     stage('push'){
