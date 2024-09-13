@@ -46,9 +46,9 @@ RUN mkdir -p $CATALINA_HOME/webapps/draw && \
         conf/server.xml
 
 # Copy draw.io config files
-COPY PreConfig.js PostConfig.js $CATALINA_HOME/webapps/draw/js/
+COPY debian/PreConfig.js debian/PostConfig.js $CATALINA_HOME/webapps/draw/js/
 # Copy docker-entrypoint
-COPY docker-entrypoint.sh /
+COPY debian/docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 
 WORKDIR $CATALINA_HOME
